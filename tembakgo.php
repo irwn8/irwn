@@ -6,7 +6,7 @@ echo "\e            GOJEK VERSION 1.7.1            \n";
 echo "\e SCRIPT GOJEK AUTO REGISTER + AUTO CLAIM VOUCHER\n";
 echo "\n";
 nope:
-echo "\e[?] Masukkan Nomor HP Anda : ";
+echo "\e[?] Masukkan Nomor HP Sia : ";
 $nope = trim(fgets(STDIN));
 $cek = cekno($nope);
 if ($cek == false)
@@ -39,7 +39,7 @@ if ($register == false)
 		$h=fopen("newgojek.txt","a");
 		fwrite($h,json_encode(array('token' => $verif, 'voc' => 'gofood gak ada'))."\n");
 		fclose($h); 
-                echo "\e[!] Trying to redeem Reff : G-MPW4WBM!\n";
+                echo "\e[!] Trying to redeem Reff : G-MPW4WBM !\n";
                 sleep(3);
             $claim = reff($verif);
             if ($claim == false){
